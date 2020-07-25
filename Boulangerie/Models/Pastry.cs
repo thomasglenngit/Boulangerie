@@ -4,43 +4,26 @@ using Boulangerie.Models;
 
 namespace Boulangerie.Models
 {
-  public class Pastry
+  public class Pastry : Item
   {
-
-    public int Price { get; set; }
-    private static List<Pastry> _instances = new List<Pastry> {};
-
-    public int Id { get; }
-
-    public Pastry(int price)
+    
+    public Pastry()
     {
-      Price = 5;
-      _instances.Add(this);
-      Id = _instances.Count;
-    }
-     public static List<Pastry> GetAll()
-    {
-      return _instances;
+      Price = 2;
+      TotalPrice = 0;
     }
 
-    public static void ClearAll()
+    public void CalculatePrice()
     {
-      _instances.Clear();
-    }
-
-    public static Price(int pastriesPrice)
-    {
-      pastriesPrice = 0;
-      foreach(Pastry Price in _instances )
+      foreach(Pastry pastry in _instances )
       {
-        pastriesPrice += Price;
+        TotalPrice = pastry * Price;
 
-        if(_instances >= 2)
+        if(_instances % 3 == 0)
         {
-          pastriesPrice -= 5;
+          TotalPrice *= 0.83;
         }
       }
-      return pastriesPrice;
 
     }
     

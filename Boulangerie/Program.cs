@@ -1,5 +1,5 @@
 using System;
-using PierresBakery.Models;
+using Boulangerie.Models;
 using System.Collections.Generic;
 
 namespace Boulangerie
@@ -30,10 +30,10 @@ namespace Boulangerie
     {
       Console.WriteLine("How many loaves of bread can I get for you today?");
       string order = Console.ReadLine().ToLower();
-      Bread theBread = new Bread();
-      theBread.GetAll(int.Parse(order));
-      theBread.Price();
-      Console.WriteLine(theBread.Price);
+      // Bread theBread = new Bread();
+      // theBread.GetAll();
+      // theBread.Price();
+      // Console.WriteLine(theBread.Price);
       Console.WriteLine("Here is your total. Would you care for any more? (yes or no");
       string answer = Console.ReadLine().ToLower();
       if (answer == "yes")
