@@ -7,33 +7,21 @@ namespace Boulangerie.Tests
 {
   [TestClass]
 
-  public class BoulangerieTest : IDisposable
+  public class BoulangerieTest
   {
-
-    public void Dispose()
-    {
-      Boulangerie.ClearAll();
-    }
-
-    [TestMethod]
-    public void ItemConstructor_CreatesInstancesOfItem_Item()
-    {
-      Item newItem = new Item("test Item");
-      Assert.AreEqual(typeof(Item), newItem.GetType());
-    }
 
 
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBread = new Bread("test Bread");
+      Bread newBread = new Bread(5);
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
     [TestMethod]
     public void PastryConstructor_CreatesInstanceOfPastry_Pastry()
     {
-      Pastry newPastry = new Pastry("test Pastry");
+      Pastry newPastry = new Pastry(2);
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
   }
