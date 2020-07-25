@@ -10,13 +10,17 @@ namespace Boulangerie.Tests
   public class BreadTest
   {
 
-
     [TestMethod]
     public void BreadConstructor_CreatesInstanceOfBread_Bread()
     {
-      Bread newBread = new Bread(5);
+      Bread newBread = new Bread();
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
+
+    // public void CalculateOrder_MultiplyQuantityofBreadByPriceOfEach_Int()
+    // {
+
+    // }
 
   }
 }

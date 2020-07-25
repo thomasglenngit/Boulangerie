@@ -1,14 +1,25 @@
 using System;
+using System.Collections.Generic;
+using Boulangerie.Models;
 
 namespace Boulangerie.Models
 {
-  public class Pastry
+  public class Pastry : Item
   {
-    public int Price { get; set; }
-
-    public Pastry(int price)
+  
+    public Pastry()
     {
-      Price = price; 
+      Price = 2; 
+      
+    }
+
+    public void CalculateOrder()
+    {
+      TotalPrice = Price * Quantity;
+      if (Quantity >= 3)
+      {
+        TotalPrice -= 2;
+      }
     }
   }
 }

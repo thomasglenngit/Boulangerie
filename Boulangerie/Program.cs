@@ -10,37 +10,52 @@ namespace Boulangerie
 
     public static void Main()
     {
-      Console.WriteLine("Welcome to Pierre's Boulangerie! We have two items for sale. Bread or Pastries.");
-      Console.WriteLine("Bread is $5 for a loaf; buy two, get one free. Quantity 3.");
-      Console.WriteLine("Pastries are $2 each, or 3 for $5. Quantity, 3.");
-      Console.WriteLine("Would you like to order something? (yes or no)");
-        string input = Console.ReadLine();
-
-      if (input == "yes")
+      Console.WriteLine("Welcome to Pierre's Boulangerie!");
+      Console.WriteLine("We have two items for sale,");
+      Console.WriteLine("Bread or Pastries");
+      Console.WriteLine("Bread is $5 for a loaf; buy two, get one free.");
+      Console.WriteLine("Pastries are $2 each, or 3 for $5.");
+      Console.WriteLine("Would you like some bread? (yes or no)");
+        string breadBuy = Console.ReadLine().ToLower();
+      if (breadBuy == "yes")
       {
-        AddBread(input);
+        Console.WriteLine("How many loaves of bread can I get for you today?");
+        string breadOrder = Console.ReadLine().ToLower();
+        Bread newBread = new Bread();
+        newBread.AddItems(int.Parse(breadOrder));
+        newBread.CalculateOrder();
+        Console.WriteLine("Your bread order comes to: $" + newBread.TotalPrice);
+
+        Console.WriteLine("Would you like some pastries? (yes or no)");
+          string pastryBuy = Console.ReadLine().ToLower();
+        if (pastryBuy == "yes")
+        {
+        
+        Console.WriteLine("How many cupcakes would you like?");
+        string pastryOrder = Console.ReadLine().ToLower();
+        Pastry newPastry = new Pastry();
+        newPastry.AddItems(int.Parse(pastryOrder));
+        newPastry.CalculateOrder();
+        Console.WriteLine("Your pastry order comes to: $" + newPastry.TotalPrice);
+        Console.WriteLine("Would you care for anything else (yes or no)");
+        string finalAnswer = Console.ReadLine().ToLower();
+          if (finalAnswer == "yes")
+          {
+            Main();
+          }
+          else
+          {
+        int grandTotal = newPastry.TotalPrice + newBread.TotalPrice;
+        Console.WriteLine("Thanks, for coming in today.");
+        Console.WriteLine("Your grand total comes to: $" + grandTotal);
+          }
+
+        }
       } 
       else
       {
-        Console.WriteLine("Thanks for stopping by.");
+        Console.WriteLine("Thanks for coming to smell the fresh-baked bread. Have a nice day.");
       }
-    }
-
-    public static void AddBread(string input)
-    {
-      Console.WriteLine("How many loaves of bread can I get for you today?");
-      string order = Console.ReadLine().ToLower();
-      // Bread theBread = new Bread();
-      // theBread.GetAll();
-      // theBread.Price();
-      // Console.WriteLine(theBread.Price);
-      Console.WriteLine("Here is your total. Would you care for any more? (yes or no");
-      string answer = Console.ReadLine().ToLower();
-      if (answer == "yes")
-      {
-        Main();
-      }
-    }
-      
+    } 
   }
 }
