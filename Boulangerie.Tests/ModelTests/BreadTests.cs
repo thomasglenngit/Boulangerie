@@ -17,10 +17,5 @@ namespace Boulangerie.Tests
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
-    // public void CalculateOrder_MultiplyQuantityofBreadByPriceOfEach_Int()
-    // {
-
-    // }
-
   }
 }

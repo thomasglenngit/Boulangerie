@@ -31,7 +31,7 @@ namespace Boulangerie
         if (pastryBuy == "yes")
         {
         
-        Console.WriteLine("How many cupcakes would you like?");
+        Console.WriteLine("How many pastries would you like?");
         string pastryOrder = Console.ReadLine().ToLower();
         Pastry newPastry = new Pastry();
         newPastry.AddItems(int.Parse(pastryOrder));
