@@ -17,5 +17,12 @@ namespace Boulangerie.Tests
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
+    public void BreadPrice_CalculatesBreadPrice_Int()
+    {
+      Pastry newPastry = new Pastry();
+      newPastry.AddItems();
+      Assert.AreEqual(newPastry.Price);
+    }
+
   }
 }
