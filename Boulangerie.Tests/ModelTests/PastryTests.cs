@@ -36,8 +36,8 @@ namespace Boulangerie.Tests
     public void PastryQuantity_VerifyQuantityNullValue_Int()
     {
       Pastry newPastry = new Pastry();
-      newPastry.AddItems();
-      Assert.AreEqual(newPastry.Quantity);
+      newPastry.AddItems(0);
+      Assert.AreEqual(0, newPastry.Quantity);
     }
 
      [TestMethod]
