@@ -16,7 +16,7 @@ namespace Boulangerie.Models
     public void CalculateOrder()
     {
       TotalPrice = Price * Quantity;
-      if (Quantity >= 3)
+      if (Quantity % 3 == 0)
       {
         TotalPrice -= 2;
       }

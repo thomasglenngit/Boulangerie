@@ -21,18 +21,24 @@ namespace Boulangerie.Tests
     {
       Pastry newPastry = new Pastry();
       newPastry.AddItems(1);
-      // newPastry.Pastry();
       Assert.AreEqual(2, newPastry.Price);
+    }
 
+    [TestMethod]
+    public void PastryQuantity_VerifyQuantityValue_Int()
+    {
+      Pastry newPastry = new Pastry();
+      newPastry.AddItems()
+      Assert.AreEqual(newPastry.Quantity);
     }
 
      [TestMethod]
     public void PastryCalculator_CalculatesPastryOrders_Int()
     {
       Pastry newPastry = new Pastry();
-      newPastry.AddItems(5);// this AddItems method is borrowed from the parent class. It is necessary to include because it contains parameters, and gives the CalculateOrder method an argument to multiply.
-      newPastry.CalculateOrder(); // this CalculateOrder comes from the Pastry class, and requires no parameter. 
-      Assert.AreEqual(8, newPastry.TotalPrice);
+      newPastry.AddItems(9);// this AddItems method is borrowed from the parent class. It is necessary to include because it contains parameters, and gives the CalculateOrder method an argument to multiply.
+      newPastry.CalculateOrder(); // this CalculateOrder comes from the Pastry class, and requires no parameter, but...
+      Assert.AreEqual(16, newPastry.TotalPrice); // this assertion includes the inherited property (Item => Pastry) "TotalPrice" used in the Pastry CalculateOrder() method.
 
     }
 
