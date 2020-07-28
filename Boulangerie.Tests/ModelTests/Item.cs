@@ -19,8 +19,8 @@ namespace Boulangerie.Tests
     public void AddItems_VerifiesQuantityOfAddedItems_Int()
     {
       Item newItem = new Item();
-      newItem.AddItems();
-      Assert.AreEqual(newItem.Quantity);
+      newItem.AddItems(71);
+      Assert.AreEqual(71, newItem.Quantity);
     }
   }
 }
