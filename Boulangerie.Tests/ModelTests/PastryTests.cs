@@ -16,11 +16,21 @@ namespace Boulangerie.Tests
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
 
+    [TestMethod]
+    public void PastryPrice_CalculatesPastryPrice_Int()
+    {
+      Pastry newPastry = new Pastry();
+      newPastry.AddItems();
+      // newPastry.Pastry();
+      Assert.AreEqual(newPastry.Price);
+
+    }
+
      [TestMethod]
     public void PastryCalculator_CalculatesPastryOrders_Int()
     {
       Pastry newPastry = new Pastry();
-      newPastry.AddItems(5);//this AddItems method is borrowed from the parent class. It is necessary to include it because it is the one with parameters and gives the CalculateOrder method an argument to multiply.
+      newPastry.AddItems(5);// this AddItems method is borrowed from the parent class. It is necessary to include because it contains parameters, and gives the CalculateOrder method an argument to multiply.
       newPastry.CalculateOrder(); // this CalculateOrder comes from the Pastry class, and requires no parameter. 
       Assert.AreEqual(8, newPastry.TotalPrice);
 
