@@ -32,6 +32,14 @@ namespace Boulangerie.Tests
       Assert.AreEqual(100, newPastry.Quantity);
     }
 
+    [TestMethod]
+    public void PastryQuantity_VerifyQuantityNullValue_Int()
+    {
+      Pastry newPastry = new Pastry();
+      newPastry.AddItems();
+      Assert.AreEqual(newPastry.Quantity);
+    }
+
      [TestMethod]
     public void PastryCalculator_CalculatesPastryOrders_Int()
     {

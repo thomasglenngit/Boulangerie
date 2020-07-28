@@ -17,6 +17,7 @@ namespace Boulangerie.Tests
       Assert.AreEqual(typeof(Bread), newBread.GetType());
     }
 
+    [TestMethod]
     public void BreadPrice_CalculatesBreadPrice_Int()
     {
       Bread newBread = new Bread();
@@ -32,11 +33,12 @@ namespace Boulangerie.Tests
       Assert.AreEqual(100000, newBread.Quantity);
     }
 
+    [TestMethod]
     public void BreadQuantity_VerifyQuantityNullValue_Int()
     {
       Bread newBread = new Bread();
-      newBread.AddItems();
-      Assert.AreEqual(newBread.Quantity);
+      newBread.AddItems(0);
+      Assert.AreEqual(0, newBread.Quantity);
     }
 
     [TestMethod]
