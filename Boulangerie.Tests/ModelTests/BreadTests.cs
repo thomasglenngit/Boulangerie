@@ -36,9 +36,9 @@ namespace Boulangerie.Tests
     public void BreadCalculator_CalculatesBreadOrders_Int()
     {
       Bread newBread = new Bread();
-      newBread.AddItems();
+      newBread.AddItems(20);
       newBread.CalculateOrder();
-      Assert.AreEqual(newBread.TotalPrice);
+      Assert.AreEqual(95, newBread.TotalPrice);
     }
 
   }
