@@ -18,7 +18,7 @@ namespace Boulangerie.Models
       TotalPrice = Price * Quantity;
       if (Quantity % 3 == 0)
       {
-        TotalPrice -= 2;
+        TotalPrice -= 1;
       }
     }
   }
