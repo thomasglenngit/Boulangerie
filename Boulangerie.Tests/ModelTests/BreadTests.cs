@@ -19,17 +19,26 @@ namespace Boulangerie.Tests
 
     public void BreadPrice_CalculatesBreadPrice_Int()
     {
-      Pastry newPastry = new Pastry();
-      newPastry.AddItems(1);
-      Assert.AreEqual(5, newPastry.Price);
+      Bread newBread = new Bread();
+      newBread.AddItems(1);
+      Assert.AreEqual(5, newBread.Price);
     }
 
     [TestMethod]
     public void BreadQuantity_VerifyQuantityValue_Int()
     {
-      Pastry newPastry = new Pastry();
-      newPastry.AddItems(100000);
-      Assert.AreEqual(100000, newPastry.Quantity);
+      Bread newBread = new Bread();
+      newBread.AddItems(100000);
+      Assert.AreEqual(100000, newBread.Quantity);
+    }
+
+    [TestMethod]
+    public void BreadCalculator_CalculatesBreadOrders_Int()
+    {
+      Bread newBread = new Bread();
+      newBread.AddItems();
+      newBread.CalculateOrder();
+      Assert.AreEqual(newBread.TotalPrice);
     }
 
   }
