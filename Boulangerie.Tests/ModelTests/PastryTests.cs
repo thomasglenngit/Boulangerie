@@ -38,7 +38,7 @@ namespace Boulangerie.Tests
       Pastry newPastry = new Pastry();
       newPastry.AddItems(9);// this AddItems method is borrowed from the parent class. It is necessary to include because it contains parameters, and gives the CalculateOrder method an argument to multiply.
       newPastry.CalculateOrder(); // this CalculateOrder comes from the Pastry class, and requires no parameter, but...
-      Assert.AreEqual(16, newPastry.TotalPrice); // this assertion includes the inherited property (Item => Pastry) "TotalPrice" used in the Pastry CalculateOrder() method.
+      Assert.AreEqual(17, newPastry.TotalPrice); // this assertion includes the inherited property (Item => Pastry) "TotalPrice" used in the Pastry CalculateOrder() method.
 
     }
 
