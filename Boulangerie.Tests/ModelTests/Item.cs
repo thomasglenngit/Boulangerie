@@ -14,5 +14,13 @@ namespace Boulangerie.Tests
       Item newItem = new Item();
       Assert.AreEqual(typeof(Item), newItem.GetType());
     }
+
+    [TestMethod]
+    public void AddItems_VerifiesQuantityOfAddedItems_Int()
+    {
+      Item newItem = new Item();
+      newItem.AddItems();
+      Assert.AreEqual(newItem.Quantity);
+    }
   }
 }
