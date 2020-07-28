@@ -13,11 +13,6 @@ namespace Boulangerie.Models
     {
       Quantity += numberOfItems;
     }
-
-    // public void GrandTotal(int gTotal)
-    // {
-    //   GTotal = Pastry.TotalPrice += Bread.TotalPrice;
-    // }
    
   }
 }

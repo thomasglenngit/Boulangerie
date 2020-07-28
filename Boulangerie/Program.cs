@@ -9,7 +9,7 @@ namespace Boulangerie
   {
 
     public static void Main()
-    {
+    {                           
       Console.WriteLine("Welcome to Pierre's Boulangerie!");
       Console.WriteLine("We have two items for sale,");
       Console.WriteLine("Bread or Pastries");
