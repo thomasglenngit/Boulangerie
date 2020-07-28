@@ -20,8 +20,8 @@ namespace Boulangerie.Tests
     public void BreadPrice_CalculatesBreadPrice_Int()
     {
       Pastry newPastry = new Pastry();
-      newPastry.AddItems();
-      Assert.AreEqual(newPastry.Price);
+      newPastry.AddItems(1);
+      Assert.AreEqual(5, newPastry.Price);
     }
 
   }
