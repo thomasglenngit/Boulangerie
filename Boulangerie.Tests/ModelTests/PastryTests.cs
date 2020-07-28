@@ -20,9 +20,9 @@ namespace Boulangerie.Tests
     public void PastryPrice_CalculatesPastryPrice_Int()
     {
       Pastry newPastry = new Pastry();
-      newPastry.AddItems();
+      newPastry.AddItems(1);
       // newPastry.Pastry();
-      Assert.AreEqual(newPastry.Price);
+      Assert.AreEqual(2, newPastry.Price);
 
     }
 
