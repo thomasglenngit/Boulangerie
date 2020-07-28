@@ -16,13 +16,15 @@ namespace Boulangerie.Tests
       Assert.AreEqual(typeof(Pastry), newPastry.GetType());
     }
 
-    // [TestMethod]
-    // public void PastryCalculator_CalculatesPastryOrders_Int()
-    // {
-    //   Pastry newPastry = new Pastry();
-    //   newPastry.CalculateOrder();
+     [TestMethod]
+    public void PastryCalculator_CalculatesPastryOrders_Int()
+    {
+      Pastry newPastry = new Pastry();
+      newPastry.AddItems();//this AddItems method is borrowed from the parent class. It is necessary to include it because it is the one with parameters and gives the CalculateOrder method an argument to multiply.
+      newPastry.CalculateOrder(); // this CalculateOrder comes from the Pastry class, and requires no parameter. 
+      Assert.AreEqual( newPastry.TotalPrice);
 
-    // }
+    }
 
   }
 }
