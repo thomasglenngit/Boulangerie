@@ -32,6 +32,13 @@ namespace Boulangerie.Tests
       Assert.AreEqual(100000, newBread.Quantity);
     }
 
+    public void BreadQuantity_VerifyQuantityNullValue_Int()
+    {
+      Bread newBread = new Bread();
+      newBread.AddItems();
+      Assert.AreEqual(newBread.Quantity);
+    }
+
     [TestMethod]
     public void BreadCalculator_CalculatesBreadOrders_Int()
     {
