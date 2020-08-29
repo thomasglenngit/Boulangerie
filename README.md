@@ -1,4 +1,4 @@
-**<h1 align = 'center'> Pierre's Boulangerie**
+*<h1 align = 'center'> Pierre's Boulangerie*
 
 *<h1 align = 'center'> C#/.NET Project for [Epicodus](https://www.epicodus.com/), 2020.07.17*
 
