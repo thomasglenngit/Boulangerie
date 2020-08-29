@@ -1,8 +1,13 @@
-# _Pierre's Boulangerie_
+**<h1 align = 'center'> Pierre's Boulangerie**
 
-#### _C#/.NET Project for [Epicodus](https://www.epicodus.com/), 2020.07.17_
+*<h1 align = 'center'> C#/.NET Project for [Epicodus](https://www.epicodus.com/), 2020.07.17*
 
-#### By **Thomas Glenn**
+*<h1 align = 'center'> By Thomas Glenn*
+
+
+<h1 align='center'><img width='900' height='450' src='https://img1.10bestmedia.com/Images/Photos/303166/Devanture--C3-A9glomis-C3-A9e-20050917_54_990x660.jpg'>
+<br>
+
 
 ## Description
 A program that calculates the price of bakery items based on their type and frequency. 
